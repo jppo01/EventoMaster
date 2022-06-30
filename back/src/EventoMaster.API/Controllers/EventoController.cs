@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EventoMaster.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -16,9 +17,16 @@ namespace EventoMaster.API.Controllers
         }
 
         [HttpGet]
-        public string Get()
+        public IEnumerable<Evento> Get()
         {
-            return "value";
+            return new Evento[]
+            {   
+                new Evento()
+                {
+                    EventoId = 1,
+                    Tema = "angular",
+             }
+            };
         }
     }
 }
