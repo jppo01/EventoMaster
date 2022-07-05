@@ -7,15 +7,15 @@ using EventoMaster.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace EventoMaster.API.Controllers
+namespace EventosMaster.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EventoController : ControllerBase
+    public class EventosController : ControllerBase
     {
         // Construtor
         private readonly DataContext _context;
-        public EventoController(DataContext context)
+        public EventosController(DataContext context)
         {
             _context = context;
             
